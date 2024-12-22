@@ -8,9 +8,9 @@ class MedicineModelAdd {
   Map<String, dynamic> toMap() {
     return {
 
-      'name': this.name,
-      'unit': this.unit,
-      'quantity': this.quantity,
+      'name': name,
+      'unit': unit,
+      'quantity': quantity,
     };
   }
 

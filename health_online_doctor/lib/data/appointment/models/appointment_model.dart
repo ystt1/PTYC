@@ -23,14 +23,14 @@ class AppointmentModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': this.id,
-      'userId': this.userId,
-      'dayBooking': this.dayBooking,
-      'hourBooking': this.hourBooking,
-      'victimName': this.victimName,
-      'description': this.description,
-      'age': this.age,
-      'status': this.status,
+      'id': id,
+      'userId': userId,
+      'dayBooking': dayBooking,
+      'hourBooking': hourBooking,
+      'victimName': victimName,
+      'description': description,
+      'age': age,
+      'status': status,
     };
   }
 

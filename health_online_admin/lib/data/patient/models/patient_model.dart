@@ -19,12 +19,12 @@ class PatientModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': this.id,
-      'fullName': this.name,
-      'email': this.email,
-      'phoneNumber': this.phone,
-      'password': this.password,
-      'status': this.status,
+      'id': id,
+      'fullName': name,
+      'email': email,
+      'phoneNumber': phone,
+      'password': password,
+      'status': status,
     };
   }
 

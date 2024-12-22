@@ -10,10 +10,10 @@ class UserModelCreateReq {
 
   Map<String, dynamic> toMap() {
     return {
-      'email': this.email,
-      'password': this.password,
-      'fullName': this.fullName,
-      'phoneNumber': this.phoneNumber,
+      'email': email,
+      'password': password,
+      'fullName': fullName,
+      'phoneNumber': phoneNumber,
     };
   }
 

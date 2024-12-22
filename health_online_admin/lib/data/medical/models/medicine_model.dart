@@ -17,11 +17,11 @@ class MedicineModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': this.id,
-      'name': this.name,
-      'unit': this.unit,
-      'quantity': this.quantity,
-      'status': this.status,
+      'id': id,
+      'name': name,
+      'unit': unit,
+      'quantity': quantity,
+      'status': status,
     };
   }
 

@@ -9,6 +9,8 @@ import '../../../domain/auth/usecase/login_usecase.dart';
 import '../../dashboard/page/dashboard_page.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -33,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
           listener: (BuildContext context, state) {
             if (state is AuthSuccess) {
               ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Đăng nhập thành công')));
+                  const SnackBar(content: Text('Đăng nhập thành công')));
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => DashboardPage()));
             }

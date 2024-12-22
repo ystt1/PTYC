@@ -52,9 +52,9 @@ class AddMedical extends StatelessWidget {
               listener: (BuildContext context, state) {
                 if (state is ButtonLoadingState) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
+                    const SnackBar(
                       content: Row(
-                        children: const [
+                        children: [
                           CircularProgressIndicator(),
                           SizedBox(width: 10),
                           Text("Đang xử lý..."),

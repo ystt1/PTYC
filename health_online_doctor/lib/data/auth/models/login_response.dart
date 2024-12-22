@@ -14,10 +14,10 @@ class LoginResponse {
 
   Map<String, dynamic> toMap() {
     return {
-      'email': this.email,
-      'name': this.name,
-      'description': this.description,
-      'specialized': this.specialized,
+      'email': email,
+      'name': name,
+      'description': description,
+      'specialized': specialized,
     };
   }
 

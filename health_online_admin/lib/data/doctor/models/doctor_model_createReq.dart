@@ -12,11 +12,11 @@ class DoctorModelCreateReq {
 
   Map<String, dynamic> toMap() {
     return {
-      'name': this.name,
-      'password': this.password,
-      'email': this.email,
-      'description': this.description,
-      'specialized': this.specialized,
+      'name': name,
+      'password': password,
+      'email': email,
+      'description': description,
+      'specialized': specialized,
     };
   }
 

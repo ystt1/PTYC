@@ -11,7 +11,7 @@ class DoctorRepositoryImp extends DoctorRepository{
   @override
   Future<Either> getDoctor(String name) async {
     try {
-      var response;
+      Either response;
       response = await sl<DoctorService>().getAllDoctor(name);
       return response.fold((error) => Left(error), (data) {
         final users = (data as List<DoctorModel>)

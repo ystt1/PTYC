@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:health_online_doctor/core/usecase.dart';
 import 'package:health_online_doctor/data/prescription/models/prescription_post.dart';
-import 'package:health_online_doctor/data/prescription/repository_imp/prescription_repository_imp.dart';
 
 import '../../../service_locator.dart';
 import '../repository/prescription_repository.dart';

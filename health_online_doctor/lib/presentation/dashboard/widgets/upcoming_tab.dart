@@ -7,6 +7,8 @@ import 'list_appointment.dart';
 
 
 class UpcomingTab extends StatelessWidget {
+  const UpcomingTab({super.key});
+
   @override
   Widget build(BuildContext context) {
 
@@ -28,7 +30,7 @@ class UpcomingTab extends StatelessWidget {
       },
       child: Container(
           margin: const EdgeInsets.symmetric(vertical: 10),
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
               boxShadow: const [

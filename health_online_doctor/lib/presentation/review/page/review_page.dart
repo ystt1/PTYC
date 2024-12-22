@@ -17,7 +17,7 @@ class ReviewPage extends StatelessWidget {
       child: BlocBuilder<GetReviewCubit, GetReviewState>(
           builder: (BuildContext context, GetReviewState state) {
         if (state is GetReviewStateLoading) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }
@@ -27,13 +27,14 @@ class ReviewPage extends StatelessWidget {
           );
         }
         if (state is GetReviewStateSuccess) {
-          if (state.reviews.isEmpty)
-            return Center(
+          if (state.reviews.isEmpty) {
+            return const Center(
               child: Text('don\'t have any review yet'),
             );
+          }
           return _reviews(context, state.reviews);
         }
-        return Center(
+        return const Center(
           child: Text('Some thing went wrong'),
         );
       }),
@@ -59,10 +60,10 @@ class ReviewPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(5)),
           child:  Row(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 child: Icon(Icons.person),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Expanded(
@@ -75,10 +76,10 @@ class ReviewPage extends StatelessWidget {
                             flex: 3,
                             child: Text(
                               reviews[index].userName,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
                             )),
-                        SizedBox(
+                        const SizedBox(
                           width: 40,
                         ),
                         Expanded(
@@ -86,13 +87,13 @@ class ReviewPage extends StatelessWidget {
                             child: Row(
                               children: [
                                 Text(reviews[index].star.toString()),
-                                Icon(
+                                const Icon(
                                   Icons.star,
                                   color: Colors.yellowAccent,
                                 )
                               ],
                             )),
-                        SizedBox(
+                        const SizedBox(
                           width: 40,
                         ),
                         Expanded(
@@ -101,17 +102,17 @@ class ReviewPage extends StatelessWidget {
                               alignment: Alignment.centerRight,
                               child: Text(
                                 reviews[index].dateTime,
-                                style: TextStyle(color: Colors.grey),
+                                style: const TextStyle(color: Colors.grey),
                               ),
                             ))
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Text(
                       reviews[index].comment,
-                      style: TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.black),
                     ),
                   ],
                 ),

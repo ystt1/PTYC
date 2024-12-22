@@ -10,6 +10,8 @@ import '../widgets/history_tab.dart';
 import '../widgets/today_tab.dart';
 
 class DashboardPage extends StatefulWidget {
+  const DashboardPage({super.key});
+
   @override
   State<DashboardPage> createState() => _DashboardPageState();
 }
@@ -83,8 +85,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    'Chuyên ngành: ' +
-                        (UserStorage.getSpecialization() ?? "not found"),
+                    'Chuyên ngành: ${UserStorage.getSpecialization() ?? "not found"}',
                     style: const TextStyle(
                       color: Colors.white70,
                       fontSize: 14,

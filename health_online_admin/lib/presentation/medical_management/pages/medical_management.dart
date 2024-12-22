@@ -10,6 +10,8 @@ import '../widgets/edit_medical.dart';
 
 
 class MedicineManagement extends StatefulWidget {
+  const MedicineManagement({super.key});
+
   @override
   _MedicineManagementState createState() => _MedicineManagementState();
 }
@@ -52,7 +54,7 @@ class _MedicineManagementState extends State<MedicineManagement> {
 
               ),
             ),
-            floatingActionButton:AddMedical()
+            floatingActionButton:const AddMedical()
         ));
   }
 

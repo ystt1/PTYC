@@ -1,8 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:health_online_admin/domain/doctor/usecase/get_doctor_usecase.dart';
-import 'package:health_online_admin/domain/medicine/usecase/get_medical_usecase.dart';
 import 'package:health_online_admin/presentation/Doctor_management/bloc/get_Doctor_state.dart';
-import 'package:health_online_admin/presentation/medical_management/bloc/get_medical_state.dart';
 
 import '../../../service_locator.dart';
 

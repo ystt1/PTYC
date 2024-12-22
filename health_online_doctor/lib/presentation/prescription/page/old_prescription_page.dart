@@ -178,7 +178,7 @@ class OldPrescriptionPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                index.toString() + '. ${medicine.name}',
+                '$index. ${medicine.name}',
                 style: const TextStyle(fontSize: 18),
               ),
               Text('${medicine.quantity}  ${medicine.unit}',

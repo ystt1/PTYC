@@ -16,16 +16,16 @@ import '../bloc/get_medical_state.dart';
 class PrescriptionPage extends StatefulWidget {
   final AppointmentEntity appointment;
 
-  PrescriptionPage(this.appointment);
+  const PrescriptionPage(this.appointment, {super.key});
 
   @override
   State<PrescriptionPage> createState() => _PrescriptionPageState();
 }
 
 class _PrescriptionPageState extends State<PrescriptionPage> {
-  List<Map<String, TextEditingController>> _fields = [];
-  TextEditingController _diagnosisController = TextEditingController();
-  TextEditingController _noteController = TextEditingController();
+  final List<Map<String, TextEditingController>> _fields = [];
+  final TextEditingController _diagnosisController = TextEditingController();
+  final TextEditingController _noteController = TextEditingController();
   int _fieldCount = 1;
   final LayerLink _layerLink = LayerLink();
   OverlayEntry? _overlayEntry;
@@ -33,7 +33,7 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
   void onAdd(BuildContext context) {
     try {
       String diagnosis = _diagnosisController.text ?? "";
-      if (diagnosis == "" && _fields.length == 0) {
+      if (diagnosis == "" && _fields.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             content:
                 Text('vui lòng điền field chẩn đoán và kê ít nhất 1 thuốc')));
@@ -125,7 +125,7 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
     _removeOverlay();
     _overlayEntry =
         _createOverlay(suggestions, controller, controllerId, controllerUnit);
-    Overlay.of(context)?.insert(_overlayEntry!);
+    Overlay.of(context).insert(_overlayEntry!);
   }
 
   void _removeOverlay() {
@@ -229,7 +229,7 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
                     children: [
                       Row(
                         children: [
-                          Text((index + 1).toString() + "."),
+                          Text("${index + 1}."),
                           const SizedBox(width: 40),
                           Expanded(
                             flex: 7,
@@ -339,7 +339,7 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text('Chẩn đoán: '),
-        Container(
+        SizedBox(
           width: 500,
           height: 35,
           child: TextField(
@@ -358,7 +358,7 @@ class _PrescriptionPageState extends State<PrescriptionPage> {
           width: 100,
         ),
         const Text('Ghi chú: '),
-        Container(
+        SizedBox(
           width: 500,
           height: 35,
           child: TextField(

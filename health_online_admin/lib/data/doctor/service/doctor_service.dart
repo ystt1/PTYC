@@ -33,9 +33,9 @@ class DoctorServiceImp extends DoctorService {
         return Right(users);
       }
       if (response.statusCode == 204) {
-        return Left("Không có bất kì bác sĩ nào");
+        return const Left("Không có bất kì bác sĩ nào");
       }
-      return Left("Some thing went wrong!");
+      return const Left("Some thing went wrong!");
     } catch (e) {
       return Left(e.toString());
     }

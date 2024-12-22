@@ -6,9 +6,11 @@ import '../../patient_management/pages/patient_management.dart';
 
 
 class NavigatorDrawer extends StatelessWidget {
+  const NavigatorDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return const Drawer(
 
     );
   }

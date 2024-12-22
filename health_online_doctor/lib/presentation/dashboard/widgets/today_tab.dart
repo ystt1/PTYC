@@ -8,6 +8,8 @@ import 'package:health_online_doctor/presentation/dashboard/widgets/list_appoint
 import '../../prescription/page/prescription_page.dart';
 
 class TodayAppointmentsTab extends StatelessWidget {
+  const TodayAppointmentsTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

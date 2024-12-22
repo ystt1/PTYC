@@ -14,7 +14,7 @@ class MedicalRepositoryImp extends MedicalRepository{
   @override
   Future<Either> getMedical(String email) async {
     try {
-      var response;
+      Either response;
       response = await sl<MedicalService>().getAllMedical(email);
       return response.fold((error) => Left(error), (data) {
         final medicines = (data as List<MedicineModel>)

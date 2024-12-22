@@ -21,13 +21,13 @@ class DoctorModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': this.id,
-      'name': this.name,
-      'password': this.password,
-      'email': this.email,
-      'description': this.description,
-      'specialized': this.specialized,
-      'status': this.status,
+      'id': id,
+      'name': name,
+      'password': password,
+      'email': email,
+      'description': description,
+      'specialized': specialized,
+      'status': status,
     };
   }
 

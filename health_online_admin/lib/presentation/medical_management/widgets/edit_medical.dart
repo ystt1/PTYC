@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:health_online_admin/common/bloc/button/button_state.dart';
-import 'package:health_online_admin/data/medical/models/medical_add_model.dart';
 import 'package:health_online_admin/data/medical/models/medicine_model.dart';
 import 'package:health_online_admin/domain/medicine/entity/medicine_entity.dart';
 import 'package:health_online_admin/domain/medicine/usecase/update_medical_usecase.dart';

@@ -12,6 +12,8 @@ import '../widgets/delete_patient.dart';
 import '../widgets/edit_patient.dart';
 
 class PatientManagement extends StatefulWidget {
+  const PatientManagement({super.key});
+
   @override
   _PatientManagementState createState() => _PatientManagementState();
 }
@@ -54,7 +56,7 @@ class _PatientManagementState extends State<PatientManagement> {
             
             ),
           ),
-          floatingActionButton:AddPatient()
+          floatingActionButton:const AddPatient()
         ));
   }
 
@@ -76,7 +78,7 @@ class _PatientManagementState extends State<PatientManagement> {
           DataCell(Text(patient.id)),
           DataCell(Text(patient.email)),
           DataCell(
-            Container(
+            SizedBox(
               width: 370,
               child: Text(
                 patient.password,

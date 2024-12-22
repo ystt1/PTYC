@@ -7,6 +7,8 @@ import '../widgets/navigator_drawer.dart';
 
 
 class AdminDashboard extends StatefulWidget {
+  const AdminDashboard({super.key});
+
   @override
   State<AdminDashboard> createState() => _AdminDashboardState();
 }
@@ -16,7 +18,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
 
   final List<Widget> _pages = [
     Center(child: PatientManagement()),
-    Center(child: DoctorManagement()),
+    const Center(child: DoctorManagement()),
     Center(child: MedicineManagement()),
   ];
 
@@ -34,26 +36,26 @@ class _AdminDashboardState extends State<AdminDashboard> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              child: Text('Admin Menu', style: TextStyle(color: Colors.white, fontSize: 24)),
+            const DrawerHeader(
               decoration: BoxDecoration(color: Colors.blue),
+              child: Text('Admin Menu', style: TextStyle(color: Colors.white, fontSize: 24)),
             ),
             ListTile(
-              title: Text('Manage Patients'),
+              title: const Text('Manage Patients'),
               onTap: () {
                 _onItemTapped(0);
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Manage Doctors'),
+              title: const Text('Manage Doctors'),
               onTap: () {
                 _onItemTapped(1);
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: Text('Manage Medicines'),
+              title: const Text('Manage Medicines'),
               onTap: () {
                 _onItemTapped(2);
                 Navigator.pop(context);

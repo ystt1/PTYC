@@ -10,7 +10,7 @@ class PatientRepositoryImp extends PatientRepository{
   @override
   Future<Either> getPatient(String email) async {
     try {
-      var response;
+      Either response;
       response = await sl<PatientService>().getAllPatient(email);
       return response.fold((error) => Left(error), (data) {
         final users = (data as List<PatientModel>)

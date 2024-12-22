@@ -10,7 +10,7 @@ class ReviewRepositoryImp extends ReviewRepository {
   @override
   Future<Either> getReview() async {
     try {
-      var response;
+      Either response;
       response = await sl<ReviewSpringbootService>().getReview();
       return response.fold((error) => Left(error), (data) {
         final reviews = (data as List<ReviewResponse>)

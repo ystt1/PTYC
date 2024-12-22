@@ -17,10 +17,10 @@ class MedicineResponse {
 
   Map<String, dynamic> toMap() {
     return {
-      'name': this.name,
-      'unit': this.unit,
-      'dosage': this.dosage,
-      'quantity': this.quantity,
+      'name': name,
+      'unit': unit,
+      'dosage': dosage,
+      'quantity': quantity,
     };
   }
 

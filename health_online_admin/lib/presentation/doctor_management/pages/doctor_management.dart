@@ -53,7 +53,7 @@ class _DoctorManagementState extends State<DoctorManagement> {
                 ),
               ),
             ),
-            floatingActionButton: AddDoctor()));
+            floatingActionButton: const AddDoctor()));
   }
 
   List<DataColumn> _createColumn() {
@@ -75,7 +75,7 @@ class _DoctorManagementState extends State<DoctorManagement> {
           DataCell(Text(doctor.id)),
           DataCell(Text(doctor.email)),
           DataCell(
-            Container(
+            SizedBox(
               width: 170,
               child: Text(
                 doctor.password,
@@ -86,7 +86,7 @@ class _DoctorManagementState extends State<DoctorManagement> {
             ),
           ),
           DataCell(Text(doctor.name)),
-          DataCell( Container(
+          DataCell( SizedBox(
             width: 200,
             child: Text(
               doctor.description,

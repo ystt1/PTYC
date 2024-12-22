@@ -33,8 +33,8 @@ class ListAppointment extends StatelessWidget {
                   child: Text(type == 0
                       ? "Today is Free"
                       : (type == -1
-                          ? "you didn\'n have any appointment"
-                          : "you doesn\'t have any appointment in the future yet")),
+                          ? "you didn'n have any appointment"
+                          : "you doesn't have any appointment in the future yet")),
                 );
               }
               return ListView.builder(

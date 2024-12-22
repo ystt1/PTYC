@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
-import 'package:health_online_doctor/core/app_constant.dart';
 import 'package:health_online_doctor/data/auth/models/login_input.dart';
 import 'package:health_online_doctor/data/auth/models/login_response.dart';
 import 'package:http/http.dart' as http;

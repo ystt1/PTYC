@@ -13,9 +13,9 @@ class PrescriptionResponse {
 
   Map<String, dynamic> toMap() {
     return {
-      'note': this.note,
-      'diagnosis': this.diagnosis,
-      'medicines': this.medicines,
+      'note': note,
+      'diagnosis': diagnosis,
+      'medicines': medicines,
     };
   }
 
